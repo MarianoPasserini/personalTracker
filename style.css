@@ -22,27 +22,26 @@ body{
 }
 
 .month-grid-active{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: center;
+    align-items: center; */
     height: 80%;
     border: 1px dashed #444;
     width: 100%;
 }
 
 .month-item-active{
-    border: 3px solid #585757;
+    border: 1px solid #585757;
     background-color: #333333; /* Dark gray */
-    margin: 5px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
     transition: transform 0.8s ease-out 1s, box-shadow 0.2s ease; /* Add transition */
-    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Change to column to stack day numbers vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
 }
 
 .month-item-none{
@@ -87,12 +86,21 @@ body{
     display:none;
 }
 
-.days-list-active{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    border: 1px dashed #444;
-    width: 100%;
+.days-list-active {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
+    padding: 0;
+    place-items: center;
+    max-width: max-content;
+}
+
+.days-list-active li {
+    width: 2em; /* Adjust width as needed */
+    height: 2em; /* Adjust height as needed */
+    line-height: 2em; /* Vertically center text within the box */
+    border: 1px solid #ccc; /* Optional: Add border for better visibility */
+    border-radius: 50%; /* Optional: Makes the circle smoother */
+    margin-top: 20px; /* Optional: Add margin between day numbers */
+    cursor: pointer;
 }
