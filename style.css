@@ -1,0 +1,98 @@
+body{
+    text-align: center;
+    background-color: #333333; /* Dark gray */
+    color: #fff; /* White or a light color for text */
+    height: 90vh;
+}
+.container {
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 0 auto;
+    border: 1px solid #444;
+    background-color: #1a1a1a;
+}
+
+.month-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create four columns */
+    height: 80%;
+    border: 1px dashed #444;
+    transition: transform 0.4s ease-out, box-shadow 0.2s ease;
+}
+
+.month-grid-active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    border: 1px dashed #444;
+    width: 100%;
+}
+
+.month-item-active{
+    border: 3px solid #585757;
+    background-color: #333333; /* Dark gray */
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-out 1s, box-shadow 0.2s ease; /* Add transition */
+    cursor: pointer;
+}
+
+.month-item-none{
+    display: none;
+}
+
+/* Add hover styles to your existing CSS */
+
+.month-item {
+    border: 3px solid #585757;
+    background-color: #333333; /* Dark gray */
+    margin: 5px;
+    text-align: center;
+    /* Center text vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease-out, box-shadow 0.2s ease; /* Add transition */
+    cursor: pointer;
+}
+
+@keyframes expand {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.month-item-active {
+    animation: expand 0.4s ease-out;
+}
+
+/* Apply styles on hover */
+.month-item:hover {
+    transform: scale(1.1); /* Increase the size by 10% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Add a glowing box shadow */
+}
+
+.days-list{
+    display:none;
+}
+
+.days-list-active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    border: 1px dashed #444;
+    width: 100%;
+}
