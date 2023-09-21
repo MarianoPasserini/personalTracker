@@ -90,9 +90,9 @@ body{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     list-style: none;
-    padding: 0;
     place-items: center;
     max-width: max-content;
+    margin-right: 30px;
 }
 
 .days-list-active li {
@@ -102,5 +102,42 @@ body{
     border: 1px solid #ccc; /* Optional: Add border for better visibility */
     border-radius: 50%; /* Optional: Makes the circle smoother */
     margin-top: 20px; /* Optional: Add margin between day numbers */
+    margin-right: 25px;
     cursor: pointer;
 }
+
+div span{
+    margin: 0 14px;
+    cursor: pointer;
+}
+
+.year-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.days-name{
+    display: none;
+}
+.days-name-li{
+    display: none;
+}
+.days-name-li-active {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
+    place-items: center;
+    padding: 0;
+  }
+.days-name-li-active li{
+    width: 2em; /* Adjust width as needed */
+    height: 2em; /* Adjust height as needed */
+    line-height: 2em; /* Vertically center text within the box */
+    margin-top: 20px; /* Optional: Add margin between day numbers */
+    margin-right: 28px;
+}
+  .testing{
+    display: none;
+  }
