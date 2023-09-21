@@ -141,3 +141,19 @@ div span{
   .testing{
     display: none;
   }
+
+  .btn{
+    color: #fff;
+    background-color: #333333;
+    border-color: #333333;
+    border-radius: 0;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .btn:hover{
+    transform: scale(1.1); /* Increase the size by 10% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Add a glowing box shadow */
+  }
